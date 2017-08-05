@@ -12,8 +12,9 @@
 project(addition)
 
 file(GLOB src
-  "*.cpp"
-  "../../BigNumber/BigNumber.cpp"
+#  "*.cpp"
+  addition.cpp
+  ../../BigNumber/BigNumber.cpp
 )
 
 add_executable(${PROJECT_NAME} ${src} )

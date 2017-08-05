@@ -13,7 +13,7 @@
 #include <gtest/gtest.h>
 #include "BigNumber.hpp"
 
-TEST(Test, addition)
+TEST(TestAddition, addition)
 {
     BigNumber a{"123"};
     BigNumber b{"444"};
