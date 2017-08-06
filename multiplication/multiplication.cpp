@@ -26,7 +26,10 @@ TEST(TestAddition, multiplication01)
 
 TEST(TestAddition, multiplication02)
 {
-    ASSERT_TRUE(true);
+    BigNumber a{"12345"};
+    BigNumber b{"6789"};
+    BigNumber c = a * b;
+    ASSERT_TRUE(c.mValue == "83810205");
 }
 
 int main(int argc, char* argv[])
