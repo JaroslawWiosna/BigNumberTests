@@ -18,10 +18,10 @@ TEST(TestAddition, multiplication01)
     BigNumber a{"11"};
     BigNumber b{"120"};
     BigNumber c = a * b;
-    ASSERT_TRUE(c.mValue == "1320");
+    ASSERT_TRUE(c.getmValue() == "1320");
 
     a *= b;
-    ASSERT_TRUE(a.mValue == "1320");
+    ASSERT_TRUE(a.getmValue() == "1320");
 }
 
 TEST(TestAddition, multiplication02)
@@ -29,7 +29,7 @@ TEST(TestAddition, multiplication02)
     BigNumber a{"12345"};
     BigNumber b{"6789"};
     BigNumber c = a * b;
-    ASSERT_TRUE(c.mValue == "83810205");
+    ASSERT_TRUE(c.getmValue() == "83810205");
 }
 
 int main(int argc, char* argv[])

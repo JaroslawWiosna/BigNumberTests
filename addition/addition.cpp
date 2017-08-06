@@ -19,7 +19,7 @@ TEST(TestAddition, addition01)
     BigNumber b{"444"};
     BigNumber c = a + b;
 
-    ASSERT_TRUE(c.mValue == "567");
+    ASSERT_TRUE(c.getmValue() == "567");
 }
 
 TEST(TestAddition, addition02)
@@ -28,13 +28,13 @@ TEST(TestAddition, addition02)
     BigNumber b{"2"};
     BigNumber c = a + b;
 
-    ASSERT_TRUE(c.mValue == "125");
+    ASSERT_TRUE(c.getmValue() == "125");
     //////////////
     BigNumber d{"3"};
     BigNumber e{"123"};
     BigNumber f = d + e;
 
-    ASSERT_TRUE(f.mValue == "126");
+    ASSERT_TRUE(f.getmValue() == "126");
 }
 
 TEST(TestAddition, addition03withCarry)
@@ -43,7 +43,7 @@ TEST(TestAddition, addition03withCarry)
     BigNumber b{"44"};
     BigNumber c = a + b;
 
-    ASSERT_TRUE(c.mValue == "1043");
+    ASSERT_TRUE(c.getmValue() == "1043");
 }
 
 int main(int argc, char* argv[])
