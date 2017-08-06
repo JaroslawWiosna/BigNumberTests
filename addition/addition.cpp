@@ -43,7 +43,7 @@ TEST(TestAddition, addition03withCarry)
     BigNumber b{"44"};
     BigNumber c = a + b;
 
-    ASSERT_TRUE(c.getmValue() == "1043");
+    ASSERT_EQ(c.getmValue(), "1043");
 }
 
 int main(int argc, char* argv[])
