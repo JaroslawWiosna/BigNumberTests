@@ -13,13 +13,28 @@
 #include <gtest/gtest.h>
 #include "BigNumber.hpp"
 
-TEST(TestAddition, addition)
+TEST(TestAddition, addition01)
 {
     BigNumber a{"123"};
     BigNumber b{"444"};
     BigNumber c = a + b;
 
     ASSERT_TRUE(c.mValue == "567");
+}
+
+TEST(TestAddition, addition02)
+{
+    BigNumber a{"123"};
+    BigNumber b{"2"};
+    BigNumber c = a + b;
+
+    ASSERT_TRUE(c.mValue == "125");
+    //////////////
+    BigNumber d{"3"};
+    BigNumber e{"123"};
+    BigNumber f = d + e;
+
+    ASSERT_TRUE(f.mValue == "126");
 }
 
 int main(int argc, char* argv[])
