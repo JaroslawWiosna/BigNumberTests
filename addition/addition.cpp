@@ -37,6 +37,15 @@ TEST(TestAddition, addition02)
     ASSERT_TRUE(f.mValue == "126");
 }
 
+TEST(TestAddition, addition03withCarry)
+{
+    BigNumber a{"999"};
+    BigNumber b{"44"};
+    BigNumber c = a + b;
+
+    ASSERT_TRUE(c.mValue == "1043");
+}
+
 int main(int argc, char* argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);
