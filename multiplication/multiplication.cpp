@@ -32,6 +32,14 @@ TEST(TestAddition, multiplication02)
     ASSERT_TRUE(c.getmValue() == "83810205");
 }
 
+TEST(TestAddition, multiplication03)
+{
+    BigNumber a{"123123123"};
+    BigNumber b{"456456"};
+    BigNumber c = a * b;
+    ASSERT_TRUE(c.getmValue() == "56200288232088");
+}
+
 int main(int argc, char* argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);
