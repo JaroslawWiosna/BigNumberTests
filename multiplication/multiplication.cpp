@@ -42,6 +42,15 @@ TEST(TestAddition, multiplication03)
 #endif
 }
 
+// TODO: move the following test to separate file
+TEST(Test, operatorModulo)
+{
+    BigNumber a{"123123000"};
+    BigNumber b{"1000"};
+    BigNumber c = a % b;
+    ASSERT_TRUE(c.getmValue() == "123123");
+}
+
 int main(int argc, char* argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);
