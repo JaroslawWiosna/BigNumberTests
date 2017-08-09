@@ -13,7 +13,7 @@
 #include <gtest/gtest.h>
 #include "BigNumber.hpp"
 
-TEST(TestAddition, multiplication01)
+TEST(Test, multiplication01)
 {
     BigNumber a{"11"};
     BigNumber b{"120"};
@@ -24,7 +24,7 @@ TEST(TestAddition, multiplication01)
     ASSERT_TRUE(a.getmValue() == "1320");
 }
 
-TEST(TestAddition, multiplication02)
+TEST(Test, multiplication02)
 {
     BigNumber a{"12345"};
     BigNumber b{"6789"};
@@ -32,7 +32,7 @@ TEST(TestAddition, multiplication02)
     ASSERT_TRUE(c.getmValue() == "83810205");
 }
 
-TEST(TestAddition, multiplication03)
+TEST(Test, multiplication03)
 {
     BigNumber a{"123123123"};
     BigNumber b{"456456"};
