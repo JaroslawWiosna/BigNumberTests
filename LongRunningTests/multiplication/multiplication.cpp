@@ -1,5 +1,5 @@
 /**
- * @file addition.cpp
+ * @file multiplication.cpp
  *
  * @author Jaroslaw Wiosna
  *
@@ -15,7 +15,7 @@
 #include <stdlib.h> // srand, rand
 #include <time.h> // time
 
-TEST(Test, addition04random)
+TEST(Test, multiplication01random)
 {
     constexpr std::size_t max = 1000000;
     srand(time(NULL));
@@ -24,27 +24,29 @@ TEST(Test, addition04random)
     BigNumber b{0};
     BigNumber c{0};
     BigNumber d{0};
-    BigNumber e{0};
-    const BigNumber two{"2"};
+    const BigNumber zero{0};
+    const BigNumber two{2};
+
     for (std::size_t i=0; i<max; ++i) {
-        a = rand()%1000000;
-        c = a + b;
-	EXPECT_TRUE(a.getmValue() == c.getmValue());
-    }
-    for (std::size_t i=0; i<max; ++i) {
-        a = rand()%1000000;
-        b = rand()%1000000;
-        c = a + b;
-	d = b + a;
+        a = rand()%1000;
+        b = rand()%1000;
+        c = a * b;
+        d = b * a;
 	EXPECT_TRUE(c.getmValue() == d.getmValue());
     }
     for (std::size_t i=0; i<max; ++i) {
-        a = rand()%1000000;
-        b = rand()%1000000;
-        c = two * b;
-        d = a + b + b; // TODO: check if I can use multiplication to test add
-        e = a + c;
-	EXPECT_TRUE(d.getmValue() == e.getmValue());
+        a = rand()%100000;
+        c = a * zero;
+	d = zero * a;
+	EXPECT_TRUE(c.getmValue() == d.getmValue());
+	EXPECT_TRUE(c.getmValue() == zero.getmValue());
+	EXPECT_TRUE(d.getmValue() == zero.getmValue());
+    }
+    for (std::size_t i=0; i<max; ++i) {
+        a = rand()%100000;
+        c = a * two;
+	d = a + a;
+	EXPECT_TRUE(c.getmValue() == d.getmValue());
     }
 }
 
