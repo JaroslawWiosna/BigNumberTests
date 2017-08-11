@@ -18,10 +18,14 @@ TEST(Test, equal01)
     BigNumber a{"11"};
     BigNumber b{"11"};
     BigNumber c{"123123"};
+    BigNumber d{"123124"};
     EXPECT_TRUE(a == b);
     EXPECT_TRUE(a != c);
     EXPECT_TRUE(a < c);
     EXPECT_TRUE(c > a);
+    EXPECT_TRUE(a <= c);
+    EXPECT_TRUE(c >= a);
+    EXPECT_TRUE(c <= d);
 }
 
 TEST(Test, equal02)
