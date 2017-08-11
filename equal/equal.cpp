@@ -26,6 +26,7 @@ TEST(Test, equal01)
     EXPECT_TRUE(a <= c);
     EXPECT_TRUE(c >= a);
     EXPECT_TRUE(c <= d);
+    EXPECT_TRUE(a < b);
 }
 
 TEST(Test, equal02)
