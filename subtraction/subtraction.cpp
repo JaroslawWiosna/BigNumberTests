@@ -41,6 +41,22 @@ TEST(Test, subtraction03)
     ASSERT_TRUE(c.getmValue() == "582");
 }
 
+TEST(Test, subtraction04)
+{
+    BigNumber a{"582"};
+    BigNumber b{"1"};
+    BigNumber c = a - b;
+    BigNumber d = --a;
+    BigNumber e = a--;
+    EXPECT_TRUE(c.getmValue() == "581");
+    EXPECT_TRUE(d.getmValue() == "581");
+    EXPECT_TRUE(e.getmValue() == "581");
+    EXPECT_TRUE(c.getmValue() == d.getmValue());
+    EXPECT_TRUE(d.getmValue() == e.getmValue());
+    EXPECT_TRUE(e.getmValue() == c.getmValue());
+
+}
+
 int main(int argc, char* argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);
