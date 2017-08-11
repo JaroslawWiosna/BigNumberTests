@@ -13,10 +13,18 @@
 #include <gtest/gtest.h>
 #include "BigNumber.hpp"
 
-TEST(Test, constructors)
+TEST(Test, constructors01)
 {
     BigNumber a{"42"};
     BigNumber b{42};
+
+    ASSERT_TRUE(a.getmValue() == b.getmValue());
+}
+
+TEST(Test, constructors02)
+{
+    BigNumber a{};
+    BigNumber b;
 
     ASSERT_TRUE(a.getmValue() == b.getmValue());
 }
