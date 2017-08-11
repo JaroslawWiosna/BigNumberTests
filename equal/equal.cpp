@@ -13,7 +13,7 @@
 #include <gtest/gtest.h>
 #include "BigNumber.hpp"
 
-TEST(Test, equal)
+TEST(Test, equal01)
 {
     BigNumber a{"11"};
     BigNumber b{"11"};
@@ -24,6 +24,15 @@ TEST(Test, equal)
     EXPECT_TRUE(c > a);
 }
 
+TEST(Test, equal02)
+{
+    BigNumber a{42};
+    BigNumber& pa = a;
+
+    // check for self-assignment
+    a = pa;
+
+}
 int main(int argc, char* argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);
