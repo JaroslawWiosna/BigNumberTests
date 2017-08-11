@@ -6,3 +6,8 @@ add_subdirectory( division )
 add_subdirectory( constructors )
 add_subdirectory( powerOfTen )
 add_subdirectory( equal )
+
+if(BUILD_LONG_RUNNING_TESTS)
+    add_subdirectory( LongRunningTests )
+endif()
+

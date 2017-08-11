@@ -9,11 +9,11 @@
 #  file, You can obtain one at http://mozilla.org/MPL/2.0/.
 #
 
-project(addition)
+project(additionLongRunning)
 
 file(GLOB src
   "*.cpp"
-  ../../BigNumber/BigNumber.cpp
+  ../../../BigNumber/BigNumber.cpp
 )
 
 add_executable(${PROJECT_NAME} ${src} )
