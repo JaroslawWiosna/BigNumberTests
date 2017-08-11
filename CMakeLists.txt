@@ -7,6 +7,7 @@ add_subdirectory( constructors )
 add_subdirectory( powerOfTen )
 add_subdirectory( equal )
 add_subdirectory( operators )
+add_subdirectory( fibonacci_factorial )
 
 if(BUILD_LONG_RUNNING_TESTS)
     add_subdirectory( LongRunningTests )
